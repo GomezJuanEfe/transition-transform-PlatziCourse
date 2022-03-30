@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: gainsboro;
+}
+.container {
+  perspective: 800px;
+  /* 
+  Te property perspective activate the 3D space.
+  The smalest the value of the perespetive the dipper the perspective will be.
+  Ex:
+  perspective: 900px; the element is going to look far from us
+  perspective: 100px; the element is going to look close from us
+  */
+
+  perspective-origin: top left;
+  /* 
+  This property is used to select the position which the viewer is looking at 3D dimensional space.
+  Default value: center
+  */
+}
+.box {
+  height: 200px;
+  width: 50%;
+  margin: 80px auto;
+  background-image: url(https://a.cdn-hotels.com/gdcs/production114/d115/5a3ff7e3-3997-4ccb-8415-00f3302f2d3f.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #fff;
+  transform: rotateY(-45deg);
+  transition: transform 1s;
+}
+.container:hover .box{
+  transform: rotateY(-45deg) rotateX(40deg);
+}
