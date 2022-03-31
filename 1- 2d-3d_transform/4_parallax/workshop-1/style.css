@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+}
+.parallax-container {
+  width: 100%;
+  height: 100vh;
+  perspective: 8px;
+  perspective-origin: 50%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+.image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: 0 50%;
+}
+.image__background {
+  width: 100%;
+  height: auto;
+  transform: translateZ(0px) scale(1);
+  transform-origin: 0 50%;
+}
+.image__background img {
+  width: 100%;
+}
+.image__middle {
+  width: 100%;
+  height: 100%;
+  transform: translateZ(3px) scale(0.625);
+  transform-origin: 50%;
+}
+.image__foreground {
+  transform: translate(30%, 150%) translateZ(1.5px) scale(0.8125);
+  transform-origin: top;
+}
+.image__foreground img {
+  width: 30%;
+}
+.card {
+  width: 150px;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  transform: rotate(-20px);
+}
+.one {
+  background-image: url(https://images.vexels.com/media/users/3/246024/isolated/preview/33cc2563eeb8804493bdb0e1fb431e1d-cow-profile-flat.png);
+  left: 30%;
+  bottom: -180px;
+}
+.two {
+  background-image: url(https://www.google.com/search/static/gs/animal/cover_images/m068zj_cover.png);
+  right: 35%;
+  bottom: -450px;
+}
+.three {
+  background-image: url(https://farmdesire.com/wp-content/uploads/2021/03/male-rooster-name.png);
+  right: 20%;
+  bottom: -260px;
+}
