@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10%;
+  background-color: gainsboro;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.container:hover .box {
+  transform: translate(30vw);
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.one {
+  background-color: rgb(255, 192, 203);
+  transition: transform 2s linear;
+}
+.two {
+  background-color: rgb(255, 170, 185);
+  transition: transform 2s ease;
+}
+.three {
+  background-color: rgb(255, 108, 132);
+  transition: transform 2s ease-in;
+}
+.four {
+  background-color: rgb(255, 68, 99);
+  transition: transform 2s ease-out;
+}
+.five {
+  background-color: rgb(255, 52, 86);
+  transition: transform 2s ease-in-out;
+}
+.six {
+  background-color: rgb(255, 0, 43);
+  transition: transform 2s step-end;
+}

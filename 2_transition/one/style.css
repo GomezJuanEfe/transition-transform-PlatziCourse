@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* 
+  SAME
+*/
+.trans-container {
+  width: 450px;
+  max-width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.example {
+  width: 400px;
+  max-width: 100%;
+  height: 300px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+  TRANSLATE
+*/
+
+.translate-1,
+.translate-2,
+.translate-3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.translate-1 {
+  position: relative;
+  background-color: lightgreen;
+}
+
+.translate-2 {
+  position: absolute;
+  background-color: lightpink;
+  transition: transform 1.5s;
+}
+
+.translate-3 {
+  position: absolute;
+  background-color: lightseagreen;
+  transition: transform 1s;
+}
+
+.translate-1:hover .translate-2 {
+  transform: translate(25%, 25%);
+}
+
+.translate-1:hover .translate-3 {
+  transform: translate(50%, 50%);
+}
+
+/* 
+  ROTATE
+*/
+.rotate-1,
+.rotate-2,
+.rotate-3 {
+  width: 100px;
+  height: 100px;
+  transition: transform 1s;
+}
+
+.rotate-1 {
+  background-color: lightgreen;
+  position: relative;
+}
+
+.rotate-2 {
+  position: absolute;
+  background-color: lightpink;
+  transition: transform 1s linear;
+}
+
+.rotate-3 {
+  position: absolute;
+  background-color: lightseagreen;
+  transition: transform 2s linear;
+}
+
+.rotate-1:hover .rotate-2 {
+  transform: rotate(-45deg);
+}
+
+.rotate-1:hover .rotate-3 {
+  transform: rotate(-22.5deg);
+}
+
+/* 
+  SCALE
+*/
+.scale-1,
+.scale-2,
+.scale-3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.scale-1 {
+  position: relative;
+  background-color: lightgreen;
+}
+
+.scale-2 {
+  position: absolute;
+  background-color: lightpink;
+  transition: transform 1.5s;
+}
+
+.scale-3 {
+  position: absolute;
+  background-color: lightseagreen;
+  transition: transform 2s;
+}
+
+.scale-1:hover .scale-2 {
+  transform: scale(75%);
+}
+
+.scale-1:hover .scale-3 {
+  transform: scale(50%);
+}
+
+/* 
+  SKEW
+*/
+.skew-1,
+.skew-2,
+.skew-3 {
+  width: 100px;
+  height: 100px;
+}
+
+.skew-1 {
+  position: relative;
+  background-color: lightgreen;
+}
+
+.skew-2 {
+  position: absolute;
+  background-color: lightpink;
+  transition: transform 3s;
+}
+
+.skew-3 {
+  position: absolute;
+  background-color: lightseagreen;
+  transition: transform 2s;
+}
+
+.skew-1:hover .skew-2 {
+  transform: skew(45deg);
+}
+
+.skew-1:hover .skew-3 {
+  transform: skew(80deg);
+}
+
+/* 
+  MATRIX
+*/
+.matrix-1,
+.matrix-2 {
+  width: 100px;
+  height: 100px;
+}
+
+.matrix-1 {
+  background-color: lightgreen;
+}
+
+.matrix-2 {
+  background-color: lightpink;
+  transition: transform 4s;
+}
+
+.matrix-1:hover .matrix-2 {
+  transform: matrix(1, 2, -1, 1, 60, 60)
+}
