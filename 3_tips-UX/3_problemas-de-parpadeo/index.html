@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problemas de parpadeo</title>
+  <style>
+    .item {
+      background-color: palevioletred;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+    .container:hover .item {
+      transform: translate(200px);
+    }
+  </style>
+</head>
+<body>
+  <h1>Problemas de parpadeo</h1>
+  <p>
+    Con frecuencia sucede que cuando hacemos hover en algunos de los elementos vemos como un leve parpadeo que hace que tengamos una mala experiencia como usuarios. La forma de solucionar esto es mediante un contenedor. El disparador de nuesto efecto va a ser el hover del contenedor, pero el elemento que va a reaccionar es otro. Ve al código para que lo puedas entender mucho mejor.
+  </p>
+  <div class="container">
+    <div class="item"></div>
+  </div>
+</body>
+</html>

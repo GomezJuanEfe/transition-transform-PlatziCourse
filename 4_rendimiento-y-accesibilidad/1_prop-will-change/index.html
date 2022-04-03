@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aceleración de hardware y la propiedad Will-change</title>
+  <style>
+    button {
+      background-color: palegoldenrod;
+      width: 100px;
+      height: 30px;
+    }
+    .better {
+      will-change: trasnform;
+      transition: transform 500ms;
+    }
+    .better:hover {
+      transform: translateY(5px);
+    }
+    .worst {
+      will-change: margin-top;
+      transition: transform 500ms;
+    }
+    .worst:hover {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Aceleración de hardware y la propiedad Will-change
+  </h1>
+  <p>
+    Las propiedades más adecuadas para poder animar son opacity y transform. Esto porque solo tienen que pasar por los procesos de composite. Esto hace que la animación este a cargo de la GPU y el proceso sea menos costoso en términos de memoria.
+  </p>
+  <p>
+    El paso entre CPU y GPU y la optimización de este es lo que se le conoce como acelereación de hardware. Para esto utilizamos la propiedad Will-change.
+  </p>
+  <div>
+    <button class="better"></button>
+    <button class="worst"></button>
+  </div>
+</body>
+</html>

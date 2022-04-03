@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav > li {
+  display: inline-block;
+}
+
+.nav a {
+  width: 120px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.nav > li > a {
+  background-color: palevioletred;
+}
+
+.nav > li > a:hover {
+  color: palevioletred;
+  background-color: white;
+}
+
+.nav li ul {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  z-index: -10;
+  transition: opacity 500ms;
+  transition-delay: 300ms;
+}
+
+.nav > li > ul > li > a {
+  background-color: rgb(199, 117, 144);
+}
+.nav>li>ul>li>a:hover {
+  color: rgb(199, 117, 144);
+  background-color: white;
+}
+
+.nav > li > ul > li > ul > li a {
+  background-color: rgb(167, 88, 114);
+}
+
+.nav>li>ul>li>ul>li a:hover {
+  color: rgb(167, 88, 114);
+  background-color: white;
+}
+
+.nav li:hover > ul {
+  opacity: 1;
+  z-index: 10;
+  transition: opacity 300ms;
+  transition-delay: 200ms;
+  /* to-do: OCULTAR LOS ELEMENTOS. PUEDE SER CON UN Z-INDEX, O SIMPLEMENTE NO MOSTRANDO LOS ELEMENTOS */
+}
+
+.nav li ul li {
+  position: relative;
+  right: -80px;
+}
